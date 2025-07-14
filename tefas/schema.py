@@ -50,7 +50,9 @@ class BreakdownSchema(Schema):
     fund_participation_certificate = fields.Float(data_key="FKB", allow_none=True)  # Fon Katılma Belgesi
     real_estate_certificate = fields.Float(data_key="GAS", allow_none=True)  # Gayrimenkul Sertifikası
     venture_capital_investment_fund_participation = fields.Float(data_key="GSYKB", allow_none=True)  # Girişim Sermayesi Yatırım Fon Katılma Payları
+    venture_capital_investment_fund = fields.Float(data_key="GSYY", allow_none=True)  # Girişim Sermayesi Yatırım Ortaklıkları
     real_estate_investment_fund_participation = fields.Float(data_key="GYKB", allow_none=True)  # Gayrimenkul Yatırım Fon Katılma Payları
+    real_estate_investment_trust = fields.Float(data_key="GYY", allow_none=True)  # Gayrimenkul Yatırım Ortaklıkları
     treasury_bill = fields.Float(data_key="HB", allow_none=True)  # Hazine Bonosu
     stock = fields.Float(data_key="HS", allow_none=True)  # Hisse Senedi
     government_bonds_and_bills_fx = fields.Float(data_key="KBA", allow_none=True)  # Kamu Dış Borçlanma Araçları

@@ -74,7 +74,9 @@ As of today, we support the following data schema from [Tefas](http://www.fundtu
 | fund_participation_certificate                 | Share of fund participation certificate                    | `float` |
 | real_estate_certificate                        | Share of real estate certificate                           | `float` |
 | venture_capital_investment_fund_participation  | Share of venture capital investment fund                   | `float` |
+| venture_capital_investment_fund                | Share of venture capital investment trust                  | `float` |
 | real_estate_investment_fund_participation      | Share of real estate investment fund                       | `float` |
+| real_estate_investment_trust                   | Share of real estate investment trust                      | `float` |
 | treasury_bill                                  | Share of treasury bill                                     | `float` |
 | stock                                          | Share of stock                                             | `float` |
 | government_bonds_and_bills_fx                  | Share of government bonds and bills (fx)                   | `float` |
