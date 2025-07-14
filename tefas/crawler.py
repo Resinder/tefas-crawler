@@ -120,7 +120,9 @@ class Crawler:
 
         return merged
 
-    def _do_post(self, endpoint: str, data: Dict[str, str], attempt: int = 0) -> Dict[str, str]:
+    def _do_post(
+        self, endpoint: str, data: Dict[str, str], attempt: int = 0
+    ) -> Dict[str, str]:
         max_attempt = 5
         try:
             response = self.session.post(
@@ -132,13 +134,21 @@ class Crawler:
             return response.json().get("data", {})
         except ValueError:
             if attempt == max_attempt:
-                raise Exception("Max attempt limit reached. Wait for a while before trying again")
+                raise Exception(
+                    "Max attempt limit reached. Wait for a while before trying again"
+                )
             attempt += 1
             sleep_sec = attempt * 5
-            print("Stuck at rate limiting or robot check. Waiting for "+str(sleep_sec)+" seconds to retry. Attempt #"+str(attempt))
+            print(
+                "Stuck at rate limiting or robot check. Waiting for "
+                + str(sleep_sec)
+                + " seconds to retry. Attempt #"
+                + str(attempt)
+            )
             time.sleep(sleep_sec)
             print("Trying..")
             return self._do_post(endpoint, data, attempt)
+
 
 def _parse_date(date: Union[str, datetime]) -> str:
     if isinstance(date, datetime):
